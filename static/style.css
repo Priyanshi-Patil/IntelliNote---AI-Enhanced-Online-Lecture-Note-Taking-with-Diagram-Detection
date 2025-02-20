@@ -1,0 +1,396 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0ede7; /* Light background */
+    color: #000000; /* Black text */
+}
+
+/* Header Styling */
+header {
+    background-color: #e3dac9; /* Light beige for header */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #000000; /* Black for header text */
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff; /* White text for nav links */
+    background-color: #b08e6b; /* Soft beige for nav buttons */
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.2em;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #e8c39e; /* Light beige on hover */
+    transform: scale(1.1);
+    color: #000; /* Improved contrast on hover */
+}
+
+/* Hero Section */
+.hero {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000; /* Black text for contrast */
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #b08e6b, #e8c39e); /* Gradient background */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+.hero p {
+    font-size: 1.5em;
+    max-width: 600px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
+}
+
+/* Content Section */
+.content {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Transcribe Form */
+#transcribeForm {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#transcribeForm input[type="text"],
+#transcribeForm input[type="url"],
+#transcribeForm select {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 450px;
+    font-size: 1.1em;
+}
+
+#transcribeForm button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #b08e6b; /* Soft beige for button */
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#transcribeForm button:hover,
+#transcribeForm button:focus {
+    background-color: #e8c39e; /* Light beige on hover */
+    transform: scale(1.1);
+}
+
+/* Transcription Result */
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff; /* White for transcription result */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none; /* Hidden by default */
+    text-align: left;
+}
+
+#result h3 {
+    color: #b08e6b; /* Soft beige for headings */
+}
+
+#result pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#result img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Detected Images Styling */
+#imagesContainer {
+    display: none; /* Hidden by default */
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.detected-image {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 40px;
+    background-color: #f0ede7; /* Light background for features section */
+}
+
+.features div {
+    background-color: #ffffff; /* White for feature cards */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 280px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.features div h3 {
+    color: #b08e6b; /* Soft beige for feature headings */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.features div p {
+    font-size: 1.1em;
+    color: #000000; /* Black for feature descriptions */
+}
+
+.features div:hover,
+.features div:focus-within {
+    transform: translateY(-10px);
+    background-color: #e8c39e; /* Light beige on hover */
+    color: white;
+}
+
+.features div:hover h3,
+.features div:focus-within h3,
+.features div:hover p,
+.features div:focus-within p {
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #b08e6b; /* Soft beige for footer */
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: white; /* White for modal content */
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h1 {
+    font-size: 2.2em;
+    color: black; /* Consistent text color */
+    margin-bottom: 20px;
+}
+
+.modal-content .input-group {
+    margin-bottom: 15px;
+    position: relative;
+    text-align: left;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.1em;
+}
+
+.modal-content i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.modal-content button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #b08e6b; /* Soft beige for buttons */
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover,
+.modal-content button:focus {
+    background-color: #e8c39e; /* Light beige on hover */
+    transform: scale(1.1);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5em;
+    color: #888;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.close:hover,
+.close:focus {
+    color: #b08e6b; /* Soft beige on hover */
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+    padding: 20px;
+}
+
+.social-login button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b5998; /* Facebook color */
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social-login button.google {
+    background-color: #db4437; /* Google color */
+}
+
+.social-login button.google:hover {
+    background-color: #c33d2e;
+}
+
+.social-login button.facebook:hover {
+    background-color: #2d4373; /* Darker Facebook color on hover */
+}
+
+.social-login i {
+    margin-right: 0.5em;
+}
+
+/* Success Message */
+.success-message {
+    margin-top: 1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav a {
+        font-size: 1em; /* Smaller text on mobile */
+    }
+
+    .features div {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        height: 300px; /* Adjusted height for mobile */
+    }
+
+    .modal-content {
+        width: 90%; /* Adjusted modal width for mobile */
+    }
+
+    #transcribeForm input[type="text"],
+    #transcribeForm input[type="url"],
+    #transcribeForm select {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .social-login button {
+        margin: 0 5px;
+    }
+
+    #imagesContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detected-image {
+        max-width: 90%;
+    }
+}
